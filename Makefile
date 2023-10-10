@@ -12,7 +12,7 @@ ifneq (,$(findstring sunCC,$(CXX)))
 	PAR_FLAG = -xopenmp
 endif
 
-ifneq ($(SERIAL), 1)
+ifeq ($(OPENMP), 1)
 	CXX_FLAGS += $(PAR_FLAG)
 endif
 
